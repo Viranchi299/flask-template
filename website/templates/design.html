@@ -1,0 +1,94 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<div class="jumbotron">
+  <h1 class="display-4">Design Module</h1>
+  <p class="lead">where the work gets done.</p>
+</div>
+
+<div class="alert alert-dark" role="alert">
+  <h1>Input RAM Concept files</h1>
+</div>
+
+
+
+<form method="POST">
+  <div class="form-group">
+    <label for="exampleFormControlFile1"><h5>Column Elements</h5></label>
+    <input type="file" class="form-control-file" id="col_elem">
+  </div>
+</form>
+
+<form method="POST">
+  <div class="form-group">
+    <label for="exampleFormControlFile1"><h5>Wall Elements</h5></label>
+    <input type="file" class="form-control-file" id="wall_elem">
+  </div>
+</form>
+
+<form method="POST">
+  <div class="form-group">
+    <label for="exampleFormControlFile1"><h5>Wall Mesh</h5></label>
+    <input type="file" class="form-control-file" id="wall_mesh">
+  </div>
+</form>
+
+<form method="POST">
+  <div class="form-group">
+    <label for="exampleFormControlFile1"><h5>Design Section</h5></label>
+    <input type="file" class="form-control-file" id="ds">
+  </div>
+</form>
+
+<form method="POST">
+  <div class="form-group">
+    <label for="exampleFormControlFile1"><h5>Latitude Design Strips</h5></label>
+    <input type="file" class="form-control-file" id="lat_design_strips">
+  </div>
+</form>
+
+<form method="POST">
+  <div class="form-group">
+    <label for="exampleFormControlFile1"><h5>Longitude Design Strips</h5></label>
+    <input type="file" class="form-control-file" id="long_design_strips">
+  </div>
+</form>
+
+<br>
+<div class="alert alert-dark" role="alert">
+  <h1>other info</h1>
+</div>
+
+
+<h4>Units</h4>
+
+<form method="POST">
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="unit" value="metric">
+  <label class="form-check-label" for="inlineRadio1">metric</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="unit" value="imperial">
+  <label class="form-check-label" for="inlineRadio2">imperial</label>
+</div>
+<div align="center">
+  <button type="submit" class="btn btn-primary">submit unit</button>
+</div>
+</form>
+
+<form method="POST">
+  <textarea name="note" id="note" class="form-control"></textarea>
+  <br />
+  <div align="center">
+    <button type="submit" class="btn btn-primary">Add Note</button>
+  </div>
+</form>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}
