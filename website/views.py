@@ -47,14 +47,23 @@ def guide():
 @views.route('/submitted', methods=['POST','GET'])
 def submit_info():
     if request.method == 'POST':
-        # print(request)
-        # message = request.form.get('options')
-        # print("selected unit is:")
-        # print(message)
+        print(request)
+        message = request.form.get('options')
+        print("selected unit is:")
+        print(message)
 
-        #allows multiple values to be posted
+        filename = request.form.get('col_elem')
+        print(filename)
+
+        output_vals = []
+
+        #print all the values posted from design.html
         for key, val in request.form.items():
             #print(key,val)
-            print(key, val)        
+            print(key, val)     
+            output_vals.append(val)
+              
+        length=len(output_vals)
+        print(length)             
     
-    return render_template("guide.html", namme="hi")    
+    return render_template("submitted.html", output=output_vals, length=length)    
