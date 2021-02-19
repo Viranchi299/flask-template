@@ -35,12 +35,21 @@ def delete_note():
 
     return jsonify({})
 
-
-@views.route('/design', methods=['POST','GET'])
+@views.route('/design', methods=['GET'])
 def design():
-    if request.method == 'POST':
-        size = request.form.get('note')
-        print("hello")
-        print(size)
-    
     return render_template("design.html")
+
+@views.route('/guide', methods=['GET'])
+def guide():
+    return render_template("guide.html")             
+
+
+@views.route('/submitted', methods=['POST','GET'])
+def submit_info():
+    if request.method == 'POST':
+        print(request)
+        message = request.form.get('options')
+        print("selected unit is:")
+        print(message)
+    
+    return render_template("guide.html", namme=message)    
